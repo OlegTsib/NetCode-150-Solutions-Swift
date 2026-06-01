@@ -4,6 +4,14 @@ class Solution {
     // b + c = -a
     // c = -(a + b)
     // "c" will always be unique because a pair of unique [a, b] will result in a unique "c" value
+    """
+    Time complexity: O(n2)
+    Space complexity: O(n)
+    
+    n is the number of elements in the input array nums.
+    The outer forEach iterates n times, and for each iteration, pairSumSorted runs in O(n) with its two-pointer approach, resulting in O(n^2).
+    The space complexity is O(n) for the sorted array and the tripples output storage.
+    """
     func threeSum(_ nums: [Int]) -> [[Int]] {
         var tripples = [[Int]]()
         let sorted = nums.sorted()
