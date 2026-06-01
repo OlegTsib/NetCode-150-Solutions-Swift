@@ -29,6 +29,23 @@ class Solution {
         return tripples
     }
 
+    // flatmap version
+    
+    // func threeSum(_ nums: [Int]) -> [[Int]] {
+    //     let sorted = nums.sorted()
+
+    //     return sorted.enumerated().flatMap { index, value -> [[Int]] in
+    //         guard value <= 0 else { return [] }
+
+    //         if index > 0, index + 1 < sorted.count, value == sorted[index - 1] {
+    //             return []
+    //         }
+
+    //         let pairs = pairSumSorted(nums: sorted, startIndex: index + 1, target: -value) 
+    //         return pairs.map { [value] + $0 }
+    //     }
+    // }
+
     func pairSumSorted(nums: [Int], startIndex: Int, target: Int) -> [[Int]] {
         var leftIndex = startIndex
         var rightIndex = nums.count - 1
